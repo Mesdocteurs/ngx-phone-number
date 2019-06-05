@@ -126,7 +126,7 @@ gulp.task('rollup:umd', function () {
       // The name to use for the module for UMD/IIFE bundles
       // (required for bundles with exports)
       // See "name" in https://rollupjs.org/#core-functionality
-      name: 'ngx-international-phone-number',
+      name: 'ngx-phone-number',
 
       // See "globals" in https://rollupjs.org/#core-functionality
       globals: {
@@ -134,7 +134,7 @@ gulp.task('rollup:umd', function () {
       }
 
     }))
-    .pipe(rename('ngx-international-phone-number.umd.js'))
+    .pipe(rename('ngx-phone-number.umd.js'))
     .pipe(gulp.dest(distFolder));
 });
 

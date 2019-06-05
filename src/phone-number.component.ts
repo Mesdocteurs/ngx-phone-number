@@ -17,7 +17,7 @@ import {
     NG_VALIDATORS,
     NG_VALUE_ACCESSOR
 } from '@angular/forms';
-import * as glibphone from 'google-libphonenumber';
+import { parsePhoneNumberFromString } from 'libphonenumber-js';
 import { Country } from './country.model';
 import { CountryService } from './country.service';
 
@@ -36,7 +36,7 @@ const VALIDATOR = {
 };
 
 @Component({
-    selector: 'international-phone-number',
+    selector: 'phone-number',
     templateUrl: './phone-number.component.html',
     styleUrls: ['./phone-number.component.scss', './assets/css/flags.min.css'],
     host: {
@@ -252,10 +252,9 @@ export class PhoneNumberComponent
 
         if (value) {
             // validating number using the google's lib phone
-            const phoneUtil = glibphone.PhoneNumberUtil.getInstance();
             try {
-                let phoneNumber = phoneUtil.parse(value);
-                let isValidNumber = phoneUtil.isValidNumber(phoneNumber);
+                let phoneNumber = parsePhoneNumberFromString(value);
+                let isValidNumber = phoneNumber.isValid();
                 return isValidNumber ? null : validationError;
             } catch (ex) {
                 return validationError;

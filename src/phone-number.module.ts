@@ -23,10 +23,10 @@ import { CountryService } from './country.service';
     ],
     providers: [CountryService]
 })
-export class InternationalPhoneNumberModule {
+export class PhoneNumberModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: InternationalPhoneNumberModule,
+      ngModule: PhoneNumberModule,
       providers: [CountryService]
     };
   }

@@ -1,19 +1,19 @@
-# ngx-international-phone-number
+# ngx-phone-number
 A simple international telephone number input. Allows you to create a phone number field with country dropdown. 
 
-This is re-written version (with enhancement) of [ng4-intl-phone](https://github.com/kondi0/ng4-intl-phone/). So credit should go to [kondi0](https://github.com/kondi0).
+This is a fork of [ngx-international-phone-number](https://github.com/nikhiln/ngx-international-phone-number), asjusted to use smaller [libphonenumber-js](https://github.com/catamphetamine/libphonenumber-js) instead of Google's lib.
 
 ## Installation
 
 To install this library, run:
 
 ```bash
-$ npm install ngx-international-phone-number --save
+$ npm install ngx-phone-number --save
 ```
 
 ## Consuming your library
 
-Once you have installed it you can import `InternationalPhoneNumberModule` from `ngx-international-phone-number` in any application module. E.g.
+Once you have installed it you can import `PhoneNumberModule` from `ngx-phone-number` in any application module. E.g.
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,7 +22,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';
+import { PhoneNumberModule } from 'ngx-phone-number';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';
     BrowserModule,
 
     // InternationalPhoneNumberModule module
-    InternationalPhoneNumberModule
+    PhoneNumberModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -60,13 +60,9 @@ Once it is imported, you can use `international-phone-number`:
        allowedCountries: A list of countries (iso codes) that would get display in country dropdown. E.g. [allowedCountries]="['in', 'ca', 'us']" would only show Canada, India and US. If not provided, all the countries would get displayed.
 
 
-## Troubleshooting:
-If you are getting error "Can't resolve 'google-libphonenumber'" while building with aot, try to install google-libphonenumber. Run npm install google-libphonenumber@3.0.9 --save
-
-
 ## Authors
-    * Original Author: kondi0
-    * Author: nikhiln 
+    * Original Author: nikhiln
+    * Author: diokhan 
 ## License
 
 MIT

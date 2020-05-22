@@ -1,7 +1,7 @@
 <div class="input-group">
   <span class="input-group-addon flagInput">
          <div class="dropdown">
-            <button type="button" class="dropbtn btn" (click)="displayDropDown()">
+            <button type="button" class="dropbtn btn" (click)="displayDropDown()" [disabled]="disabled">
               <span [class]="'flag flag-' + selectedCountry.countryCode" *ngIf="selectedCountry"></span>
               <span class="defaultCountry" *ngIf="!selectedCountry"></span>
               <span class="arrow-down"></span>
@@ -19,10 +19,10 @@
   </span>
 
   <!-- if required -->
-  <input onlyNumber="true" class="form-control" [attr.maxlength]="maxlength" [(ngModel)]="phoneNumber" (ngModelChange)="updatePhoneNumber($event)" 
-  [placeholder]="placeholder" [type]="type" *ngIf="required" required #phoneNumberInput>
-  
+  <input onlyNumber="true" class="form-control" [attr.maxlength]="maxlength" [(ngModel)]="phoneNumber" (ngModelChange)="updatePhoneNumber($event)"
+  [placeholder]="placeholder" [type]="type" [required]="required" [disabled]="disabled" #phoneNumberInput>
+
   <!-- if not required -->
-  <input onlyNumber="true" class="form-control" [attr.maxlength]="maxlength" [(ngModel)]="phoneNumber" (ngModelChange)="updatePhoneNumber($event)" 
-  [placeholder]="placeholder" [type]="type" *ngIf="!required" #phoneNumberInput>
+<!--  <input onlyNumber="true" class="form-control" [attr.maxlength]="maxlength" [(ngModel)]="phoneNumber" (ngModelChange)="updatePhoneNumber($event)"-->
+<!--  [placeholder]="placeholder" [type]="type" *ngIf="!required" #phoneNumberInput>-->
 </div>

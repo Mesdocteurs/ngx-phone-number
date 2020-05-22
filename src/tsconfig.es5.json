@@ -22,7 +22,7 @@
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
     "flatModuleOutFile": "ngx-phone-number.js",
-    "flatModuleId": "ngx-phone-number"
+    "flatModuleId": "@mesdocteurs/ngx-phone-number"
   },
   "files": [
     "./index.ts"

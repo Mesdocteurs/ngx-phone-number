@@ -56,6 +56,7 @@ Once it is imported, you can use `phone-number`:
        placeholder: A placeholder text which would be displayed in input widget
        required: Indicates whether it's required or not
        disabled: Indicates whether it's disabled or not
+       readonly: Indicates whether it's readonly or not
        allowDropdown: Indicates whether to allow selecting country from dropdown
        allowedCountries: A list of countries (iso codes) that would get display in country dropdown. E.g. [allowedCountries]="['in', 'ca', 'us']" would only show Canada, India and US. If not provided, all the countries would get displayed.
 

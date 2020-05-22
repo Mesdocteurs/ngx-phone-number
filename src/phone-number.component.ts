@@ -52,6 +52,7 @@ export class PhoneNumberComponent
 
     @Input() defaultCountry: string;
     @Input() required: boolean;
+    @Input() readonly: boolean;
     @Input() disabled: boolean;
     @Input() allowDropdown = true;
     @Input() type = 'text';

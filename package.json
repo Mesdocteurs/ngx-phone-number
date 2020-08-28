@@ -1,6 +1,6 @@
 {
   "name": "@mesdocteurs/ngx-phone-number",
-  "version": "1.0.6",
+  "version": "1.1.1",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -12,7 +12,11 @@
     "lite": "lite-server",
     "playground:build": "tsc -p playground -w",
     "playground": "concurrently \"npm run build:watch\" \"npm run playground:build\" \"npm run lite\"",
-    "test": "tsc && karma start"
+    "test": "tsc && karma start",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "repository": {
     "type": "git",
@@ -57,7 +61,6 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "lite-server": "^2.3.0",
-    "node-sass": "^4.5.2",
     "node-sass-tilde-importer": "^1.0.0",
     "node-watch": "^0.5.2",
     "protractor": "~5.1.0",
@@ -75,6 +78,7 @@
   },
   "dependencies": {
     "libphonenumber-js": "^1.7.18",
+    "node-sass": "^4.14.1",
     "tsickle": "^0.34.0"
   }
 }
